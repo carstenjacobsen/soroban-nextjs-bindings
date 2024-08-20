@@ -1,1 +1,1 @@
-# soroban-nextjs-bindings
+# Soroban bindings in Next.js
