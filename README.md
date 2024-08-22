@@ -59,5 +59,6 @@ export default function Home() {
 }
 ```
 
+### Add Smart Contract Binding
 
 
