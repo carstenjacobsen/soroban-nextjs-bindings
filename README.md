@@ -39,9 +39,24 @@ npm link hello_world
 
 The package is now ready to be used like any other package installed from the public npm registry. Note the package has to be built before linking.
 
+## Build the application
+Instead of building a Next.js project from scratch, the default application installed with Next.js is used, and then modified to fit the needs for this application. The default Next.js page has a lot of information, links, images etc. and all of that can be removed, so only the most essential code is left. The `src/app/page.tsx` file should look like this after removing the default content:
 
+```js
+import styles from "./page.module.css"; 
 
+export default function Home() { 
+   return ( 
+      <main className={styles.main}> 
+         <div className={styles.center}> 
+            <div className={styles.description}> 
 
+            </div> 
+         </div>
+      </main> 
+   ); 
+}
+```
 
 
 
