@@ -28,11 +28,13 @@ The package has to be linked to the project, since it’s a local package, and n
 
 These commands will created the two-way link:
 
+```bash
 cd package/hello_world
 npm run build
 npm link
 
 cd ../..
 npm link hello_world
+```
 
 The package is now ready to be used like any other package installed from the public npm registry. Note the package has to be built before linking.
