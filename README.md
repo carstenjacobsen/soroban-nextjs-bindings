@@ -38,3 +38,10 @@ npm link hello_world
 ```
 
 The package is now ready to be used like any other package installed from the public npm registry. Note the package has to be built before linking.
+
+
+
+
+
+
+
