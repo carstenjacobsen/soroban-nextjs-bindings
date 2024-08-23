@@ -71,5 +71,62 @@ const contract = new Client.Client({
 });
 ```
 
+### Add UI controls
+The frontend’s functionality has two parts, the first will take text from an input field and send it to the Hello World smart contract, and the second will take the response from the smart contract and display it. 
+
+All that's needed is a form with an input box and a submit button. The form submits the form data to the function `formSubmit()` when the user clicks the Send button. The form data (the name) is sent to the `hello` smart contract function, and the response it stored as a message state, and displayed on the UI. 
+
+This is the complete code used for the `src/app/page.tsx` file:
+
+```js
+"use client"; 
+import { useState } from "react"; 
+import * as Client from "hello_world"; 
+import styles from "./page.module.css"; 
+
+const contract = new Client.Client({ 
+   ...Client.networks.testnet, 
+   rpcUrl: 'https://soroban-testnet.stellar.org:443' 
+}); 
+
+export default function Home() { 
+   const [msg, setMsg] = useState(""); 
+
+   const formSubmit = async (formData: FormData) => { 
+      let name = formData.get('name') as string; 
+
+      if (name) { 
+         const { result } = await contract.hello({ to: name }); 
+         setMsg(result.join(" ") + "!"); 
+      } 
+   } 
+
+   return ( 
+      <main className={styles.main}> 
+         <div className={styles.center}> 
+            <div className={styles.description}> 
+               <form action={formSubmit}> 
+                  <label>Name: </label> 
+                  <input name="name" /> 
+                  <button type="submit">Send</button> 
+               </form> 
+            </div> 
+         </div> 
+         {msg} 
+      </main> 
+   ); 
+}
+```
+
+Run the application
+To see the result in a browser, use the npm commands previously used for testing the Next.js installation:
+
+```bash
+npm run build
+npm run start
+```
+
+Navigate to http://localhost:3000 in a browser to see the web application.
+
 
 
