@@ -3,10 +3,10 @@
 Soroban enables developers to build smart contracts on the Stellar blockchain, and incorporate the advanced asset and payment features of Stellar, in their own dApps. This tutorial shows how to invoke smart contracts from a simple web application, built with Next.js.
 
 ## Deploy Hello World smart contract
-The default Hello World described in the documentation is used in this tutorial, without any modifications. All needed to setup and test bindings is a smart contract that can accept a text string and respond with a value. It’s less important what the smart contract actually does. For full installation guide see [Setup](https://developers.stellar.org/docs/build/smart-contracts/getting-started/setup) or skip to the [Hello World](https://developers.stellar.org/docs/build/smart-contracts/getting-started/hello-world) section if the Stellar CLI is already installed. Note: The contract ID will be needed in the next step.
+The Hello World smart contract described in the documentation is used in this tutorial, without any modifications. All needed to setup and test bindings is a smart contract that can accept a text string and respond with a value. It’s less important what the smart contract actually does. For full installation guide see [Setup](https://developers.stellar.org/docs/build/smart-contracts/getting-started/setup) or skip to the [Hello World](https://developers.stellar.org/docs/build/smart-contracts/getting-started/hello-world) section if the Stellar CLI is already installed. Note: The contract ID will be needed in the next step.
 
 ## TypeScript bindings
-The Stellar CLI can generate bindings for different programming languages (see [documentation](https://developers.stellar.org/docs/tools/developer-tools/cli/stellar-cli#stellar-contract-bindings)), so there’s no need for writing code to communicate directly with the smart contract through RPC. The Stellar CLI will create a TypeScript package, easy to implement in a TypeScript project. In a terminal, run this command:
+The Stellar CLI can generate bindings for different programming languages (see [documentation](https://developers.stellar.org/docs/tools/developer-tools/cli/stellar-cli#stellar-contract-bindings)), so there’s no need for writing code to send smart contract requests directly RPC. The Stellar CLI will create a TypeScript package, easy to implement in a TypeScript project. In a terminal, run this command:
 
 ```bash
 stellar contract bindings typescript \
@@ -126,10 +126,10 @@ npm run build
 npm run start
 ```
 
-Navigate to `http://localhost:3000` in a browser to see the web application.
+Navigate to `http://localhost:3000` in a browser to see and try the web application.
 
 ## Conclusion
-This quick run-through shows how to use bindings, to interact with a smart contract from a Nexj.js application, for a very simple use case. Read more about Soroban smart contracts and bindings in the documentation:
+This quick tutorial shows how to use bindings, to interact with a smart contract from a Nexj.js application, for a very simple use case. Read more about Soroban smart contracts and bindings in the documentation:
 
 - [Soroban Smart Contracts Documentation](https://developers.stellar.org/docs/build/smart-contracts)
 - [Soroban Smart Contracts Bindings](https://developers.stellar.org/docs/tools/developer-tools/cli/stellar-cli#stellar-contract-bindings)
