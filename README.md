@@ -119,7 +119,7 @@ export default function Home() {
 ```
 
 ### Run the application
-To see the result in a browser, use the npm commands previously used for testing the Next.js installation:
+To see the result in a browser, use the npm commands to build and start the project:
 
 ```bash
 npm run build
