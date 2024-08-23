@@ -118,7 +118,7 @@ export default function Home() {
 }
 ```
 
-Run the application
+### Run the application
 To see the result in a browser, use the npm commands previously used for testing the Next.js installation:
 
 ```bash
@@ -126,7 +126,11 @@ npm run build
 npm run start
 ```
 
-Navigate to http://localhost:3000 in a browser to see the web application.
+Navigate to `http://localhost:3000` in a browser to see the web application.
 
+## Conclusion
+This quick run-through shows how to use bindings, to interact with a smart contract from a Nexj.js application, for a very simple use case. Read more about Soroban smart contracts and bindings in the documentation:
 
+- [Soroban Smart Contracts Documentation](https://developers.stellar.org/docs/build/smart-contracts)
+- [Soroban Smart Contracts Bindings](https://developers.stellar.org/docs/tools/developer-tools/cli/stellar-cli#stellar-contract-bindings)
 
