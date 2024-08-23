@@ -74,7 +74,7 @@ const contract = new Client.Client({
 ### Add UI controls
 The frontend’s functionality has two parts, the first will take text from an input field and send it to the Hello World smart contract, and the second will take the response from the smart contract and display it. 
 
-All that's needed is a form with an input box and a submit button. The form submits the form data to the function `formSubmit()` when the user clicks the Send button. The form data (the name) is sent to the `hello` smart contract function, and the response it stored as a message state, and displayed on the UI. 
+All that's needed is a form with an text input field and a submit button. The form submits the form data to the function `formSubmit()` when the user clicks the Send button. The form data (the name) is sent to the `hello` smart contract function, and the response it stored as a message state, and displayed on the UI. 
 
 This is the complete code used for the `src/app/page.tsx` file:
 
