@@ -60,5 +60,16 @@ export default function Home() {
 ```
 
 ### Add Smart Contract Binding
+Since the smart contract binding is already linked, it can be imported in the TypeScript code as any other installed packages. Access to the smart contract goes through a client, which needs information about the network and RPC url. The network and url must be the same as used for generating the binding:
+
+```js
+import * as Client from "hello_world";
+
+const contract = new Client.Client({ 
+   ...Client.networks.testnet, 
+   rpcUrl: 'https://soroban-testnet.stellar.org:443' 
+});
+```
+
 
 
