@@ -23,7 +23,7 @@ npx create-next-app@latest
 ```
 
 ## Add binding package
-The binding package that was created in Step 2 can now be copied into the Next.js project. Copy package/hello_world (both folder and subfolder including all files) to the root of the Next.js project. 
+The binding package can now be copied into the Next.js project. Copy package/hello_world (both folder and subfolder including all files) to the root of the Next.js project. 
 
 The package has to be linked to the project, since it’s a local package, and not installed from the public npm registry. Linking the package is a two-step process. First a symlink in the global package folder is created. The next step is to create a symlink from the global package to the Next.js project’s node_moduls folder. 
 
